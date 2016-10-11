@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Full Friends</title>
+	</head>
+	<body>
+		<h1>Friends Table</h1>
+		{{ all_friends }}
+		{% for friend in all_friends: %}
+   		<p>ID: {{ friend['id'] }}</p>
+   		<p>First Name: {{ friend['first_name'] }}</p>
+   		<p>Last Name: {{ friend['last_name'] }}</p>
+   		<p>Occupation: {{ friend['occupation'] }}</p>
+   		<hr>
+		{% endfor %}
+
+		<form action='/process', method='post'>
+			<label for='address'>Email Address:</label><br>
+			<input type='text' name='address'><br>
+			<input type='submit' value='Submit'>
+		</form>
+	</body>
+</html>
